@@ -19,7 +19,7 @@ const IndexPage = () => {
   const [mision2, setMision2] = useState(false)
   const [sure, setSure] = useState(false)
   let labelmision1 = "¡Ayúdame a poder comerme la dona!"
-  if (!mision1) {
+  if (mision1 === false) {
     labelmision1 = "¡Ayúdame a cambiar de vestuario!"
   }
 
@@ -35,7 +35,7 @@ const IndexPage = () => {
             <Heading color="#ff5756" level={1} textAlign="center">
               Soy Pulpi el Pulpo
           </Heading>
-            <Heading color="lightRed" level={3} textAlign="center">
+            <Heading color="lightRed" margin={{ horizontal: 'auto' }} level={3} textAlign="center">
               {labelmision1}
             </Heading>
           </Typist>
@@ -76,8 +76,18 @@ const IndexPage = () => {
           {makey &&
             <Box direction="column">
               <Heading level={3}>6. Agrega Makey Makey a Scratch</Heading>
-              <Image height="800px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.51.01.png?alt=media&token=e6207767-2cb8-4506-a9c0-2f7d6819405a"></Image>
+
+              <Image margin="auto" width="500px" height="800px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.51.01.png?alt=media&token=e6207767-2cb8-4506-a9c0-2f7d6819405a"></Image>
               <Heading level={3}>7. Conecta a computadora y a banana</Heading>
+
+              <Image width="medium" height="600px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2021.11.31.png?alt=media&token=7b0423c8-62ab-4b73-b12b-a10416df6f31"></Image>
+              <Image width="large" height="700px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2021.12.01.png?alt=media&token=3554f0d9-ed0e-4157-9a74-fce6fc0f53f0"></Image>
+              <Heading level={3}>8. Toca la banana para que el sprite salte</Heading>
+              <Button primary label="¡Listo!" onClick={() => {
+                setMision1(false)
+                setScore((score) => (score + 10000))
+              }} icon={<Achievement />}></Button>
+
             </Box>}
 
           <Box animation={{ type: "pulse", delay: "8000" }}>
