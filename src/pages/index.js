@@ -16,12 +16,14 @@ const IndexPage = () => {
   const [hints2, setHints2] = useState(false)
   const [makey, setMakey] = useState(false)
 
-  const [mision2, setMision2] = useState(false)
+  const [label, setLabel] = useState("¡Ayúdame a poder comerme la dona!")
   const [sure, setSure] = useState(false)
   let labelmision1 = "¡Ayúdame a poder comerme la dona!"
-  if (mision1 === false) {
+  if (!mision1) {
     labelmision1 = "¡Ayúdame a cambiar de vestuario!"
   }
+  console.log(mision1)
+  console.log(label)
 
 
   return (
@@ -35,10 +37,13 @@ const IndexPage = () => {
             <Heading color="#ff5756" level={1} textAlign="center">
               Soy Pulpi el Pulpo
           </Heading>
-            <Heading color="lightRed" margin={{ horizontal: 'auto' }} level={3} textAlign="center">
-              {labelmision1}
-            </Heading>
+
           </Typist>
+          {mision1 == true ? <Heading color="lightRed" margin={{ horizontal: 'auto' }} level={3} textAlign="center">
+            {label}
+          </Heading> : <Heading color="lightRed" margin={{ horizontal: 'auto' }} level={3} textAlign="center">
+              ¡Ayúdame a cambiar de vestuario!
+        </Heading>}
 
           <Box height="medium" margin={{ horizontal: 'auto' }} width="medium" background={"url('https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Picture1.png?alt=media&token=885392e8-9f21-47fb-82d6-da4fb804b701')"}></Box>
           {mision1 &&
@@ -69,11 +74,12 @@ const IndexPage = () => {
             <Image width="medium" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.20.26.png?alt=media&token=fce7d394-fe9e-48ef-a7b2-2cd0eefb47f6"></Image>
           }
           {hints2 &&
+
             <Image width="medium"
               src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.34.48.png?alt=media&token=3ae0c3aa-b321-4098-b7f8-c1b30e5b170d"></Image>
 
           }
-          {makey &&
+          {makey && mision1 &&
             <Box direction="column">
               <Heading level={3}>6. Agrega Makey Makey a Scratch</Heading>
 
@@ -85,11 +91,20 @@ const IndexPage = () => {
               <Heading level={3}>8. Toca la banana para que el sprite salte</Heading>
               <Button primary label="¡Listo!" onClick={() => {
                 setMision1(false)
+                setLabel("¡Ayúdame a cambiar de vestuario!")
                 setScore((score) => (score + 10000))
               }} icon={<Achievement />}></Button>
 
             </Box>}
+          {mision1 === false &&
+            <>
+              <Heading level={3}>1. Agrega un sprite</Heading>
+              <Heading level={3}>2. Agrega un fondo</Heading>
+              <Heading level={3}>3. Cada vez que das enter el vestuario del sprite debe de cambiar </Heading>
+              <Button label="Finish" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Levi.pdf?alt=media&token=f3ef974a-c5b4-415a-8e43-d6af06964a8f" icon={<Achievement></Achievement>}></Button>
+            </>
 
+          }
           <Box animation={{ type: "pulse", delay: "8000" }}>
             <Heading textAlign="center">
               Puntos  {score}
