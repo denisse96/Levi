@@ -79,8 +79,10 @@ const IndexPage = () => {
                             <Heading level={3}>2. Haz que un sprite cambie de color</Heading>
                             <Heading level={3}>3. Aprende a crear tu propio vestuario </Heading>
                             <Heading level={3}>4. Aprende a crear tu propio vestuario </Heading>
-                            <Button primary margin={{ bottom: "medium" }} label="Aprende a cambiar de color" target="_blank" href="https://csfirst.withgoogle.com/c/cs-first/en/an-unusual-discovery/an-unusual-discovery/extensions/code-a-color-change.html" ></Button>
-                            <Button primary label="Aprende a crear un vestuario" target="_blank" href="https://csfirst.withgoogle.com/c/cs-first/en/an-unusual-discovery/an-unusual-discovery/extensions/paint-your-own-animation.html" ></Button>
+                            <Button primary onClick={(score) => setScore(score + 1000)} margin={{ bottom: "medium" }} label="Aprende a cambiar de color" target="_blank" href="https://csfirst.withgoogle.com/c/cs-first/en/an-unusual-discovery/an-unusual-discovery/extensions/code-a-color-change.html" ></Button>
+                            <Button primary onClick={(score) => (
+                                setScore(score + 1000)
+                            )} label="Aprende a crear un vestuario" target="_blank" href="https://csfirst.withgoogle.com/c/cs-first/en/an-unusual-discovery/an-unusual-discovery/extensions/paint-your-own-animation.html" ></Button>
                             <Anchor margin={{ horizontal: 'auto', top: "small" }} label="¡Felicidades!" href="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Levi%20(1).pdf?alt=media&token=67c7484d-2509-493b-9489-3145cbcd8ad4"></Anchor>
                         </>
 
