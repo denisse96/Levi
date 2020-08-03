@@ -2,8 +2,8 @@ import { Achievement, Info } from "grommet-icons"
 import { Anchor, Box, Button, Grommet, Heading, Image } from "grommet"
 import React, { useState } from "react"
 
+import Aus from "../components/image"
 import Confetti from 'react-confetti'
-//import Image from "../components/image"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Typist from 'react-typist';
@@ -35,7 +35,7 @@ const IndexPage = () => {
               ¡Hola Levi!
           </Heading>
             <Heading color="#ff5756" level={1} textAlign="center">
-              Soy Pulpi el Pulpo
+              Soy Spark el perro
           </Heading>
 
           </Typist>
