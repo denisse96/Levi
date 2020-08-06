@@ -52,9 +52,10 @@ const IndexPage = () => {
                             <Button primary label="Leer Misión 1 " onClick={() => setinstMision1(true)} />
                             {instmision1 && <Box animation="slideRight">
                                 <Heading level={3}>1. Aprende a hacer un sello   </Heading>
-                                <Heading level={3}>1. Agrega un sprite </Heading>
-                                <Heading level={3}>2. Agrega la pluma </Heading>
-                                <Heading level={3}>3. ¡Haz que tu sprite sea un sello! </Heading>
+                                <Heading level={3}>2. Agrega un sprite </Heading>
+                                <Heading level={3}>3. Agrega la pluma </Heading>
+                                <Heading level={3}>4. ¡Haz que tu sprite sea un sello! </Heading>
+                                <Heading level={3}>****¿Puedes hacer que el sprite haga sonido al colocar un sello? ***** </Heading>
 
 
                                 <Box direction="row" gap="medium">
