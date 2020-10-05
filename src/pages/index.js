@@ -16,12 +16,9 @@ const IndexPage = () => {
   const [hints2, setHints2] = useState(false)
   const [makey, setMakey] = useState(false)
 
-  const [label, setLabel] = useState("¡Ayúdame a poder comerme la dona!")
+  const [label, setLabel] = useState("¡Ayúdame a conocer Scratch!")
   const [sure, setSure] = useState(false)
-  let labelmision1 = "¡Ayúdame a poder comerme la dona!"
-  if (!mision1) {
-    labelmision1 = "¡Ayúdame a cambiar de vestuario!"
-  }
+  const [mision3, setMision3] = useState(true)
   console.log(mision1)
   console.log(label)
 
@@ -32,20 +29,20 @@ const IndexPage = () => {
         <Box margin="auto" direction="column" alignContent="center" background="f7f6f6" gap="large">
           <Typist cursor={{ show: "true", hideWhenDone: "true", element: '' }}>
             <Heading color="#f42926" level={1} textAlign="center">
-              ¡Hola Levi!
+              ¡Hola Sibel!
           </Heading>
             <Heading color="#ff5756" level={1} textAlign="center">
               Soy Spark el perro
           </Heading>
-
+         
+   
           </Typist>
           {mision1 == true ? <Heading color="lightRed" margin={{ horizontal: 'auto' }} level={3} textAlign="center">
             {label}
           </Heading> : <Heading color="lightRed" margin={{ horizontal: 'auto' }} level={3} textAlign="center">
-              ¡Ayúdame a cambiar de vestuario!
+              ¡Ayúdame a conocer Scratch!
         </Heading>}
-
-          <Box height="medium" margin={{ horizontal: 'auto' }} width="medium" background={"url('https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Picture1.png?alt=media&token=885392e8-9f21-47fb-82d6-da4fb804b701')"}></Box>
+        <Box  height="medium" width='medium' background="url(https://scratch-diplomas-wizeline.s3.us-east-2.amazonaws.com/02bac95a04a65600a095ae5948d87756-dog-cartoon-by-vexels.png)"></Box>
           {mision1 &&
             <>
               <Button primary label="Leer Misión 1 " onClick={() => setinstMision1(true)} />
@@ -53,13 +50,14 @@ const IndexPage = () => {
                 <Heading level={3}>1. Abre scratch</Heading>
                 <Heading level={3}>2. Agrega un fondo</Heading>
                 <Heading level={3}>3. Agrega un sprite</Heading>
-                <Heading level={3}>4. Agrega que el sprite se mueva cada vez que das space</Heading>
-                <Heading level={3}>5. Agrega un segundo sprite para que el primero se destruya al segundo </Heading>
+                <Heading level={3}>4. Haz que tu sprite hable </Heading>
+                <Heading level={3}>5. Haz que tu sprite gire 10 veces</Heading>
+                <Heading level={3}> BONUS : Haz que tu sprite haga un sonido al acabar</Heading>
+                
                 <Box direction="row" gap="medium">
                   <Button primary href="https://scratch.mit.edu/projects/editor/?tutorial=getStarted" label="Abrir Scratch" target="_blank">
                   </Button>
                   <Button label="Pista 1" onClick={() => setHints(!hints)} icon={<Info></Info>}></Button>
-                  <Button label="Pista 2" onClick={() => setHints2(!hints2)} icon={<Info></Info>}></Button>
                   <Button primary label="¡Listo!" onClick={() => {
                     setMakey(!makey)
                     setScore((score) => (score + 10000))
@@ -71,40 +69,40 @@ const IndexPage = () => {
               }
             </>}
           {hints &&
-            <Image width="medium" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.20.26.png?alt=media&token=fce7d394-fe9e-48ef-a7b2-2cd0eefb47f6"></Image>
-          }
-          {hints2 &&
-
-            <Image width="medium"
-              src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.34.48.png?alt=media&token=3ae0c3aa-b321-4098-b7f8-c1b30e5b170d"></Image>
-
+            <Image width="medium" src="https://scratch-diplomas-wizeline.s3.us-east-2.amazonaws.com/Screen+Shot+2020-10-05+at+17.19.48.png"></Image>
           }
           {makey && mision1 &&
-            <Box direction="column">
-              <Heading level={3}>6. Agrega Makey Makey a Scratch</Heading>
-
-              <Image margin="auto" width="500px" height="800px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2020.51.01.png?alt=media&token=e6207767-2cb8-4506-a9c0-2f7d6819405a"></Image>
-              <Heading level={3}>7. Conecta a computadora y a banana</Heading>
-
-              <Image width="medium" height="600px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2021.11.31.png?alt=media&token=7b0423c8-62ab-4b73-b12b-a10416df6f31"></Image>
-              <Image width="large" height="700px" src="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Screen%20Shot%202020-07-29%20at%2021.12.01.png?alt=media&token=3554f0d9-ed0e-4157-9a74-fce6fc0f53f0"></Image>
-              <Heading level={3}>8. Toca la banana para que el sprite salte</Heading>
+          <>
+            <Box direction="column">    
+              <Heading level={3}>7. Agrega otro sprite </Heading>
+              <Heading level={3}>8. Agrega el evento "Al hacer clic en este objeto"  </Heading>
+              <Heading level={3}>9. Cada vez que selecciones el objeto, haz que cambie de vestuario </Heading>
+              <Heading level={3}>BONUS: Haz que los dos sprites se saluden y luego uno desaparezca </Heading>
+              <Box direction="row" gap="medium"> 
+              <Button label="Pista 2" onClick={() => setHints2(!hints2)} icon={<Info></Info>}></Button>
               <Button primary label="¡Listo!" onClick={() => {
-                setMision1(false)
-                setLabel("¡Ayúdame a cambiar de vestuario!")
-                setScore((score) => (score + 10000))
-              }} icon={<Achievement />}></Button>
-
-            </Box>}
-          {mision1 === false &&
-            <>
-              <Heading level={3}>1. Agrega un sprite</Heading>
-              <Heading level={3}>2. Agrega un fondo</Heading>
-              <Heading level={3}>3. Cada vez que das enter el vestuario del sprite debe de cambiar </Heading>
-              <Button label="Finish" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/ferropartes-d4a43.appspot.com/o/Levi.pdf?alt=media&token=f3ef974a-c5b4-415a-8e43-d6af06964a8f" icon={<Achievement></Achievement>}></Button>
-            </>
-
+                    setScore((score) => (score + 10000))
+                    setMision3(true)
+                  }} icon={<Achievement />}></Button>           
+                  </Box>
+              </Box>    
+              </> 
+            }
+            {hints2 &&
+            <Image width="medium" src="https://scratch-diplomas-wizeline.s3.us-east-2.amazonaws.com/Screen+Shot+2020-10-05+at+17.48.15.png"></Image>
           }
+
+          {
+            mision3 && 
+            <Box direction="column">  
+            <Heading level={3}>11. Agrega sonido a uno de tus sprites</Heading>  
+            <Heading level={3}>10. Agrega un título a tu historia</Heading>
+            </Box>
+           
+          }
+
+
+
           <Box animation={{ type: "pulse", delay: "8000" }}>
             <Heading textAlign="center">
               Puntos  {score}
