@@ -18,7 +18,8 @@ const IndexPage = () => {
 
   const [label, setLabel] = useState("¡Ayúdame a conocer Scratch!")
   const [sure, setSure] = useState(false)
-  const [mision3, setMision3] = useState(true)
+  const [mision3, setMision3] = useState(false)
+  const [mision4, setMision4] = useState(false)
   console.log(mision1)
   console.log(label)
 
@@ -97,9 +98,29 @@ const IndexPage = () => {
             <Box direction="column">  
             <Heading level={3}>11. Agrega sonido a uno de tus sprites</Heading>  
             <Heading level={3}>10. Agrega un título a tu historia</Heading>
+            <Button primary label="¡Listo!" onClick={() => {
+                    setScore((score) => (score + 10000))
+                    setMision4(true)
+                  }} icon={<Achievement />}></Button>    
             </Box>
            
           }
+
+          {
+            mision4 && 
+            <Box direction="column">  
+            <Heading level={1}>Crea tu propia historia</Heading>  
+            <Heading level={3}>Con dos sprites</Heading>
+            <Heading level={3}>Un sonido</Heading>
+            <Heading level={3}>Un cambio de vestuario </Heading>
+            <Heading level={3}>Un efecto</Heading>
+            <Button primary target="_blank" label="¡Listo!" href="https://scratch-diplomas-wizeline.s3.us-east-2.amazonaws.com/SibelVilla.png" onClick={() => {
+                    setScore((score) => (score + 10000))
+                    
+                  }} icon={<Achievement />}></Button>    
+            </Box>
+           
+          }     
 
 
 
