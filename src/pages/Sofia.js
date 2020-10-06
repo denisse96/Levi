@@ -30,7 +30,7 @@ const IndexPage = () => {
         <Box margin="auto" direction="column" alignContent="center" background="f7f6f6" gap="large">
           <Typist cursor={{ show: "true", hideWhenDone: "true", element: '' }}>
             <Heading color="blue" level={1} textAlign="center">
-              ¡Hola Julian!
+              ¡Hola Sofia!
           </Heading>
             <Heading color="black" level={1} textAlign="center">
               Soy Juan el astronauta
@@ -114,7 +114,7 @@ const IndexPage = () => {
             <Heading level={3}>Un sonido</Heading>
             <Heading level={3}>Un cambio de vestuario </Heading>
             <Heading level={3}>Un efecto</Heading>
-            <Button primary target="_blank" label="¡Listo!" href="https://scratch-diplomas-wizeline.s3.us-east-2.amazonaws.com/Julian.pdf" onClick={() => {
+            <Button primary target="_blank" label="¡Listo!" href="https://scratch-diplomas-wizeline.s3.us-east-2.amazonaws.com/SofiaReyes+.pdf" onClick={() => {
                     setScore((score) => (score + 10000))
                     
                   }} icon={<Achievement />}></Button>    
